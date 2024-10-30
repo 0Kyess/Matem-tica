@@ -22,10 +22,10 @@ def razao_bissetriz_externa(a, b, c):
     if a == b:
         return "Erro: não é possível calcular a divisão para a bissetriz externa quando a = b."
     
-    # Cálculo da divisão pela bissetriz externa
-    bd = (a * c) / abs(a - b)
-    dc = c + bd
-    razao = bd / dc
+    # Cálculo da divisão pela bissetriz externa usando os segmentos BF e FC
+    bf = (a * c) / abs(a - b)
+    fc = c + bf
+    razao = bf / fc
     return razao
 
 # Solicitar entrada do usuário para os valores dos lados do triângulo
@@ -40,7 +40,7 @@ try:
 
     # Cálculo da razão pela bissetriz externa
     razao_externa = razao_bissetriz_externa(a, b, c)
-    print(f"A razão BD/DC pela bissetriz externa é: {razao_externa}")
+    print(f"A razão BF/FC pela bissetriz externa é: {razao_externa}")
 
 except ValueError:
     print("Erro: Certifique-se de que todos os valores informados são números válidos.")
